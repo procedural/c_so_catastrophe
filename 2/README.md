@@ -5,7 +5,7 @@ $ make
 /usr/bin/ld: cannot find -lmylib
 collect2: error: ld returned 1 exit status
 ```
-"The problem" is that `symbolic link` points to just `libmylib.so.1`, not `/usr/lib/x86_64-linux-gnu/libmylib.so.1`:
+"The problem" is that `/usr/lib/x86_64-linux-gnu/libmylib.so` symlink points to just `libmylib.so.1`, not `/usr/lib/x86_64-linux-gnu/libmylib.so.1`:
 ```
 $ file /usr/lib/x86_64-linux-gnu/libmylib.so
 /usr/lib/x86_64-linux-gnu/libmylib.so: symbolic link to libmylib.so.1
